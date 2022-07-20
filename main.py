@@ -25,7 +25,6 @@ def gallery_url_query(search):
 
 def gallery_url_dataframe(array):
     dataframe = pd.DataFrame({"URLS": array})
-    print(dataframe)
     dataframe["UNIQUE_HASH"] = abs(dataframe[["URLS"]].sum(axis=1).map(hash))
     dataframe["URLS"] = dataframe["URLS"].str.extract(r'(/gallery/[a-zA-Z0-9]*)')
     dataframe = dataframe.dropna(axis='rows')
