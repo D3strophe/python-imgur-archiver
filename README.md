@@ -10,6 +10,9 @@ pip install -r requirements.txt
 ```
 ## Example usage: 
 python main.py <string> 
+
 python main.py lion
+
 python main.py animals
+
 python main.py birds
